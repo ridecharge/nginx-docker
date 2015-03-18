@@ -1,0 +1,7 @@
+[template]
+prefix = "/nginx/SERVICE_NAME"
+src = "server.conf.tmpl"
+dest = "/etc/nginx/conf.d/server.conf"
+keys = [
+	"/listen"
+]
