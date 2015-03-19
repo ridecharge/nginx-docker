@@ -1,2 +1,2 @@
 #!/bin/sh
-docker build -t sgarlick987/nginx .
+docker build -t ridecharge/nginx .
