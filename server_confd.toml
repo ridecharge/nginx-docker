@@ -3,5 +3,9 @@ prefix = "/nginx/SERVICE_NAME"
 src = "server.conf.tmpl"
 dest = "/etc/nginx/conf.d/server.conf"
 keys = [
-	"/listen"
+	"/listen_port",
+	"/backend_port",
+	"/client_max_body_size"
 ]
+check_cmd = "/usr/sbin/nginx -t"
+reload_cmd = "/usr/sbin/nginx -s reload"
