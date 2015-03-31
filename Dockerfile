@@ -2,11 +2,13 @@
 FROM ubuntu:14.04
 
 # Install nginx
-RUN apt-get install --no-install-recommends -y software-properties-common && \
+RUN apt-get update && \
+	apt-get -y upgrade && \
+	apt-apt-get install --no-install-recommends -y \
+	software-properties-common && \
 	add-apt-repository -y ppa:nginx/development && \
 	apt-get update && \
-	apt-get install -y nginx ca-certificates && \
-	apt-get -y upgrade 
+	apt-get install -y nginx ca-certificates
 
 # Install confd
 ADD https://github.com/kelseyhightower/confd/releases/download/v0.7.1/confd-0.7.1-linux-amd64 /usr/bin/confd
