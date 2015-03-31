@@ -4,7 +4,7 @@ FROM ubuntu:14.04
 # Install nginx
 RUN apt-get update && \
 	apt-get -y upgrade && \
-	apt-apt-get install --no-install-recommends -y \
+	apt-get install --no-install-recommends -y \
 	software-properties-common && \
 	add-apt-repository -y ppa:nginx/development && \
 	apt-get update && \
