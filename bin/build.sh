@@ -1,2 +1,2 @@
 #!/bin/sh
-docker build -t ridecharge/nginx .
+docker build --no-cache=true -t ridecharge/nginx .
