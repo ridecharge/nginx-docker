@@ -1,5 +1,5 @@
 # Latest Ubuntu LTS
-FROM ridecharge/confd
+FROM registry.gocurb.internal:80/confd
 
 # Install nginx
 RUN apt-get install --no-install-recommends -y \

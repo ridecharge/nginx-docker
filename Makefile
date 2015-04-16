@@ -1,9 +1,10 @@
-CONTAINER=ridecharge/nginx
+DOCKER_REPO?=ridecharge
+CONTAINER=$(DOCKER_REPO)/nginx
 
 all: build push
 
 build:
-	docker build -t $(CONTAINER):latest . 
+	sudo docker build -t $(CONTAINER):latest . 
 
 push:
-	docker push $(CONTAINER)
+	sudo docker push $(CONTAINER)
