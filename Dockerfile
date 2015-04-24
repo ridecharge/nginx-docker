@@ -1,4 +1,3 @@
-# Latest Ubuntu LTS
 FROM registry.gocurb.internal:80/confd
 
 # Install nginx
@@ -8,10 +7,8 @@ RUN apt-get install --no-install-recommends -y \
 	apt-get update && \
 	apt-get install -y nginx nginx-extras ca-certificates
 
-# Nginx and Confd config files
 COPY nginx.conf /etc/nginx/nginx.conf
 
-# Startup script for nginx
 COPY nginx-wrapper.sh /tmp/nginx-wrapper.sh
 RUN chmod 0500 /tmp/nginx-wrapper.sh
 
