@@ -6,6 +6,10 @@ keys = [
 	"/listen_port",
 	"/backend_port",
 	"/client_max_body_size"
+	"/proxy_connect_timeout",
+	"/proxy_send_timeout",
+	"/proxy_read_timeout",
+	"/send_timeout"
 ]
 check_cmd = "/usr/sbin/nginx -t"
 reload_cmd = "/usr/sbin/nginx -s reload"
