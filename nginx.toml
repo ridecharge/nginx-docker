@@ -10,6 +10,7 @@ keys = [
 	"/proxy_send_timeout",
 	"/proxy_read_timeout",
 	"/send_timeout"
+	"/client_body_timeout"
 ]
 check_cmd = "/usr/sbin/nginx -t"
 reload_cmd = "/usr/sbin/nginx -s reload"

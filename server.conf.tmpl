@@ -17,6 +17,10 @@ server {
     {{if exists "/send_timeout"}}
     send_timeout {{ getv "/send_timeout" }}; 
     {{end}}
+    {{if exists "/client_body_timeout"}}
+    client_body_timeout {{ getv "/client_body_timeout" }}; 
+    {{end}}
+    
     location = /nginx_health {
       return 200;
     }
